@@ -24,8 +24,5 @@ apt-get install jq
 ```
 * And run module
 ```
-sh batch_module_singleJob.sh # For CD4 only
+sh batch_module_singleJob.sh # One sample per one sh command
 ```
-
-### Sequential Jobs Flow
-![flow1](../../../README_resource/batch_detail2.png)

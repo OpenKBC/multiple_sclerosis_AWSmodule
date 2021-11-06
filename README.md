@@ -18,8 +18,8 @@ apt-get install jq
 | batch_deployment | Module for AWS Batch work (Developing) | batch_module.sh |
 
 
-### Current detail map
-![overview1](../README_resource/aws_detail.png)
+### Planned AWS detail map
+![overview2](README_source/aws_detail_full.png)
 
-### Full AWS detail map
-![overview2](../README_resource/aws_detail_full.png)
+#### EC2 involving map
+![overview1](README_source/aws_detail.png)
