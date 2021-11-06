@@ -9,7 +9,7 @@ apt-get install awscli
 apt-get install jq
 ```
 
-## Modules List
+### Modules List
 | Name | Description | Main exec file |
 |---------|---------|---------|
 | ec2_deployment | Module for EC2 auto-deployment | aws_module.sh or ec2_cloudformation_launcher.sh |
@@ -18,8 +18,8 @@ apt-get install jq
 | batch_deployment | Module for AWS Batch work (Developing) | batch_module.sh |
 
 
-#### Current detail map
+### Current detail map
 ![overview1](../README_resource/aws_detail.png)
 
-#### Full AWS detail map
+### Full AWS detail map
 ![overview2](../README_resource/aws_detail_full.png)
