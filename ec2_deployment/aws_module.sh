@@ -11,12 +11,12 @@ VolumeSize=100 # EBS volumne Size
 InstanceInfoFile=InstanceLaunch-Info # Instance launch information
 VolumeInfoFile=InstanceVolume-Info # Volume create information
 PublicIPFile=PublicIP # Public IP information
-PemKeyName=MSplatform-key
+PemKeyName=MSproject-key
 
 ## Key gen for EC2. if new key is needed, please use this command lines
-#aws ec2 create-key-pair --key-name $PemKeyName --query 'KeyMaterial' --output text > MSplatform-key.pem
+#aws ec2 create-key-pair --key-name $PemKeyName --query 'KeyMaterial' --output text > MSproject-key.pem
 ## Change auth for pem key
-#chmod -R 400 MSplatform-key.pem
+#chmod -R 400 MSproject-key.pem
 
 ## EC2 Instance launch with modifying block-device-mapping
 aws ec2 run-instances --image-id ami-0f6304b1dde9413d6 --block-device-mappings file://mapping_dockerAMI.json \
@@ -73,13 +73,13 @@ sleep 530
 aws ec2 associate-iam-instance-profile --instance-id $InstanceID --iam-instance-profile Name=ec2-access-role
 
 ## Running installer
-ssh -i MSplatform-key.pem -o StrictHostKeyChecking=no ubuntu@$ip_addr 'bash -s' < utils/installer.sh
+ssh -i MSproject-key.pem -o StrictHostKeyChecking=no ubuntu@$ip_addr 'bash -s' < utils/installer.sh
 
 ## S3 sync from S3 project bucket
-ssh -i MSplatform-key.pem -o StrictHostKeyChecking=no ubuntu@$ip_addr 'bash -s' < utils/s3Sync.sh
+ssh -i MSproject-key.pem -o StrictHostKeyChecking=no ubuntu@$ip_addr 'bash -s' < utils/s3Sync.sh
 
 ## docker-compose setup
-ssh -i MSplatform-key.pem -o StrictHostKeyChecking=no ubuntu@$ip_addr 'bash -s' < utils/docker_setup.sh
+ssh -i MSproject-key.pem -o StrictHostKeyChecking=no ubuntu@$ip_addr 'bash -s' < utils/docker_setup.sh
 
 echo "AWS module processed!"
 
