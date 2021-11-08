@@ -3,6 +3,7 @@
 ## AWS module for running the project
 * This module supports to get sample DEG by certain conditions, it is using AWS Batch and need to launch separate running for each cells result(CD4, CD8, CD14)
 * There is no parallel job for this and it is sequential job type.
+* * Batch image location: https://github.com/OpenKBC/deg-pipeline-batch-image
 
 ### Requirements on local PC
 ```

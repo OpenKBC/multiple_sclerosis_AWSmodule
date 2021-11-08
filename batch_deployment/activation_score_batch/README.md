@@ -3,6 +3,7 @@
 ## AWS module for running the project
 * This is initial version of DEG pipeline with AWS batch, it has same function with pipeline module in this project.
 * To change input, JSON file needs modification
+* Batch image location: https://github.com/OpenKBC/activation-score-batch-image
 
 ### Requirements on local PC
 ```
