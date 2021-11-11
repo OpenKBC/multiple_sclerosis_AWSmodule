@@ -5,12 +5,8 @@
 ### Batch code structure
 ```
 |-Batch1(activation_score_batch, deg_pipeline_batch)
-|   |-batch_jobs
-|   |   |-batchCode.py
-|   |   |-Dockerfile(DockerHub push)
-|   |-batch_module_singleJob.sh
+|   |-batch_module_singleJob.sh(singleJob or parellel)
 |   |-configure.json(container_configure and submit_configure)
-|
 
 ```
 
