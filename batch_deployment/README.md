@@ -17,6 +17,7 @@ apt-get install jq
 ```
 
 ## Batch Jobs List
+[![Feature extraction batch Image CI](https://github.com/OpenKBC/feature-extraction-batch-image/actions/workflows/docker-image.yml/badge.svg)](https://github.com/OpenKBC/feature-extraction-batch-image/actions/workflows/docker-image.yml)
 | Name | Description | Main exec file |
 |---------|---------|---------|
 | activation_score_batch | Activation score calculation (Parallelized or Single job)| batch_module_singleJob.sh or batch_module_parallel.sh |
